@@ -141,3 +141,10 @@
     - featured
     - user
 
+- name: sphinx-icalendar
+  url: https://sphinx-icalendar.readthedocs.io
+  badge: alpha
+  badge_label: Alpha
+  description: "Sphinx extension to render calendars in documentation"
+  categories:
+    - lib
