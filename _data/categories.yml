@@ -22,3 +22,8 @@
   title: Libraries
   description: "Python libraries for your applications."
   alt: false
+
+- id: services
+  title: Services for Open Source Projects
+  description: "Hosted services and tools we built to run our own projects. Any open source project can use them, calendar related or not."
+  alt: true
