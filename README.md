@@ -4,24 +4,25 @@ Source for [pycal.org](https://pycal.org) — the Python Calendaring Ecosystem w
 
 ## Prerequisites
 
-- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 3.4+
-- [Bundler](https://bundler.io/)
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 3.3+ with its development headers (`ruby-dev` on Debian and Ubuntu)
 - [pre-commit](https://pre-commit.com/)
 
 ## Setup
 
 ```sh
-bundle install
-pre-commit install
+make dev
 ```
+
+This installs [Bundler](https://bundler.io/) if it is missing, the gems into `vendor/bundle/`, and the pre-commit hooks.
 
 ## Local development
 
 ```sh
-bundle exec jekyll serve --livereload
+make livehtml
 ```
 
-Open <http://localhost:4000>.
+Open <http://localhost:4000>. The page reloads when you save a change.
+Run `make help` for the other targets.
 
 ## Deployment
 
