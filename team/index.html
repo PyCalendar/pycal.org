@@ -16,7 +16,7 @@ description: "The maintainers behind the Python Calendaring Ecosystem. Meet the 
         {%- assign avatar_file = site.static_files | where: "path", avatar_path | first %}
         <div class="member-avatar">
           {%- if avatar_file -%}
-          <img src="{{ avatar_path }}" alt="" loading="lazy">
+          <img src="{{ avatar_path | relative_url }}" alt="" loading="lazy">
           {%- else -%}
           {{ member.avatar }}
           {%- endif -%}

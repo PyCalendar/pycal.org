@@ -1,15 +1,15 @@
 <nav>
   <div class="container nav-inner">
-    <a href="/" class="nav-logo">pycal</a>
+    <a href="{{ '/' | relative_url }}" class="nav-logo">pycal</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </label>
     <ul class="nav-links">
-      <li><a href="/" {% if page.url=="/" %}class="active" {% endif %}>Home</a></li>
-      <li><a href="/about" {% if page.url contains "/about" %}class="active" {% endif %}>About</a></li>
-      <li><a href="/software" {% if page.url contains "/software" %}class="active" {% endif %}>Software</a></li>
-      <li><a href="/team" {% if page.url contains "/team" %}class="active" {% endif %}>Team</a></li>
+      <li><a href="{{ '/' | relative_url }}" {% if page.url=="/" %}class="active" {% endif %}>Home</a></li>
+      <li><a href="{{ '/about' | relative_url }}" {% if page.url contains "/about" %}class="active" {% endif %}>About</a></li>
+      <li><a href="{{ '/software' | relative_url }}" {% if page.url contains "/software" %}class="active" {% endif %}>Software</a></li>
+      <li><a href="{{ '/team' | relative_url }}" {% if page.url contains "/team" %}class="active" {% endif %}>Team</a></li>
       <li><a href="https://github.com/pycalendar" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
   </div>

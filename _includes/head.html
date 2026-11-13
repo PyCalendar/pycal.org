@@ -2,8 +2,8 @@
 {%- assign full_title = page_title -%}
 {%- if page.title -%}{%- assign full_title = page.title | append: ' | ' | append: site.title -%}{%- endif -%}
 {%- assign description = page.description | default: site.description -%}
-{%- assign og_image = page.og_image | default: '/assets/og-default.png' | absolute_url -%}
-{%- assign canonical = page.url | absolute_url -%}
+{%- assign og_image = page.og_image | default: '/assets/og-default.png' | prepend: site.url -%}
+{%- assign canonical = page.url | prepend: site.url -%}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +25,10 @@
 <meta name="twitter:description" content="{{ description }}">
 <meta name="twitter:image" content="{{ og_image }}">
 
-<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
 <meta name="theme-color" content="#f8f7f4">
 
-<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/playfair-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="{{ '/assets/fonts/inter.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/playfair-700.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

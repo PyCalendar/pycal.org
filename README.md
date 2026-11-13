@@ -26,3 +26,5 @@ Open <http://localhost:4000>.
 ## Deployment
 
 Pushes to `main` are automatically built and deployed to GitHub Pages.
+
+Read the Docs builds a preview of every pull request (see `.readthedocs.yaml`). The pull request's checks link to it.
