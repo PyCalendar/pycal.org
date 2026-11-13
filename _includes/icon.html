@@ -1,1 +1,1 @@
-<img src="/assets/img/icons/{{ include.name }}.svg" alt="{{ include.alt }}" class="img-inline">
+<img src="{{ '/assets/img/icons/' | append: include.name | append: '.svg' | relative_url }}" alt="{{ include.alt }}" class="img-inline">

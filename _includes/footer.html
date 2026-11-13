@@ -2,11 +2,11 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="footer-logo">pycal</a>
+        <a href="{{ '/' | relative_url }}" class="footer-logo">pycal</a>
         <p>A home for Python calendaring.<br>Software, tools, and specifications maintained in the open.</p>
         <p class="footer-license">
           This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-          <span class="footer-license-icons"><img src="/assets/img/license/cc.svg" alt=""><img src="/assets/img/license/by.svg" alt=""><img src="/assets/img/license/sa.svg" alt=""></span>
+          <span class="footer-license-icons"><img src="{{ '/assets/img/license/cc.svg' | relative_url }}" alt=""><img src="{{ '/assets/img/license/by.svg' | relative_url }}" alt=""><img src="{{ '/assets/img/license/sa.svg' | relative_url }}" alt=""></span>
         </p>
         <ul class="footer-social">
           {% for item in site.data.footer_nav.social %}
@@ -22,7 +22,7 @@
             {% if item.url contains "://" %}
             <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></li>
             {% else %}
-            {% unless page.url contains item.url %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endunless %}
+            {% unless page.url contains item.url %}<li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>{% endunless %}
             {% endif %}
           {% endfor %}
         </ul>

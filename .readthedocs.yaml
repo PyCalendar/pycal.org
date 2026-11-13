@@ -1,0 +1,16 @@
+# Read the Docs builds a preview of the site for every pull request.
+# The live site at https://pycal.org is still deployed by
+# .github/workflows/deploy.yml.
+version: 2
+
+build:
+  os: ubuntu-24.04
+  tools:
+    ruby: "3.4"
+  commands:
+    - bundle install
+    # Serve the preview under the path Read the Docs gives it, such as /en/63/.
+    - >-
+      bundle exec jekyll build
+      --destination "$READTHEDOCS_OUTPUT/html"
+      --baseurl "$(ruby -ruri -e 'print URI(ENV["READTHEDOCS_CANONICAL_URL"]).path.chomp("/")')"

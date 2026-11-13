@@ -19,6 +19,7 @@ This is the Jekyll source for [pycal.org](https://pycal.org). See [README.md](..
 - Build headings with `{% include heading.html title="..." %}`. Other pages link to their anchors, so don't rename headings casually.
 - Pages use `layout: page` with `title`, `hero_sub` and `description` front matter.
 - External links use `target="_blank" rel="noopener"`.
+- Link to pages and files on this site with `relative_url`, for example `{{ '/software' | relative_url }}`, never a bare `/software`. Pull request previews are served under a path, and bare links break there.
 
 ## Before opening a PR
 
