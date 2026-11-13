@@ -54,7 +54,7 @@
     - cli
 
 - name: ics-query
-  url: https://github.com/niccokunzmann/ics-query
+  url: https://github.com/pycalendar/ics-query
   badge: stable
   badge_label: Stable
   description: "Query iCalendar files by time range and component type from the command line. Outputs valid iCalendar files. Available via Homebrew, Windows, or Python package managers."
@@ -62,7 +62,7 @@
     - cli
 
 - name: ical2jcal
-  url: https://github.com/niccokunzmann/ical2jcal
+  url: https://pycalendar.github.io/ical2jcal/
   badge: stable
   badge_label: Stable
   description: "Converts between iCalendar (RFC 5545) and jCal (RFC 7265, JSON) formats. Available as a Python library and CLI."
@@ -70,18 +70,19 @@
     - cli
 
 - name: calendaring-jmap
-  url: https://github.com/pycalendar/calendaring-jmap
-  badge: planned
-  badge_label: Planned
-  description: "JMAP calendar support as a standalone package, including scheduling, free/busy, attachments, and push notifications. Currently part of python-caldav, being extracted here."
+  url: https://calendaring-jmap.readthedocs.io/
+  badge: stable
+  badge_label: Stable
+  description: "Calendar operations over JMAP (RFC 8620 and the JMAP Calendars draft), including scheduling, free/busy, attachments, and push notifications."
   categories:
     - client-server
+    - lib
 
-- name: calendaring-client
-  url: https://github.com/pycalendar/calendaring-client
-  badge: planned
-  badge_label: Planned
-  description: "One API for CalDAV, JMAP, and plain iCalendar feeds. Point it at a URL, and it figures out the rest."
+- name: calendaring
+  url: https://github.com/pycalendar/calendaring
+  badge: poc
+  badge_label: Pre-alpha
+  description: "One Python API for calendars and task lists, sync and async. CalDAV and local files today; iCalendar feeds, JMAP, and issue trackers are on the roadmap."
   categories:
     - client-server
     - lib
@@ -107,7 +108,7 @@
     - featured
 
 - name: calendar-cli
-  url: https://github.com/tobixen/calendar-cli
+  url: https://github.com/pycalendar/calendar-cli
   badge: sunset
   badge_label: Sunset
   description: "The original CalDAV CLI. Still works, still maintained. New users should start with plann."
@@ -141,3 +142,58 @@
     - featured
     - user
 
+- name: calendaring-sync
+  url: https://calendaring-sync.readthedocs.io/
+  badge: poc
+  badge_label: Unreleased
+  description: "Keeps the state a calendar sync needs between runs: sync tokens, object versions, and the last synced copy. Reports what changed on each side and where changes conflict."
+  categories:
+    - lib
+
+- name: calendaring-config
+  url: https://github.com/pycalendar/calendaring-config
+  badge: poc
+  badge_label: Pre-alpha
+  description: "One configuration file for caldav, calendaring, and calendaring-jmap. Describe your CalDAV servers, JMAP accounts, and .ics directories once, with secrets from a keyring or password manager."
+  categories:
+    - lib
+
+- name: icalendar-compatibility
+  url: https://icalendar-compatibility.readthedocs.io/
+  badge: poc
+  badge_label: Beta
+  description: "Reads event information such as location and description from .ics files the way their creators meant it, smoothing over how differently calendar apps write RFC 5545."
+  categories:
+    - lib
+
+- name: sphinx-icalendar
+  url: https://sphinx-icalendar.readthedocs.io/
+  badge: poc
+  badge_label: Alpha
+  description: "Sphinx extension that renders iCalendar and jCal code blocks in documentation as interactive event tables, next to the source."
+  categories:
+    - lib
+
+- name: sign.pycal.org
+  url: https://sign.pycal.org/
+  badge: stable
+  badge_label: Live
+  description: "Contributors sign a project's AI policy or contributor license agreement once, and a GitHub App labels and checks their pull requests. Any GitHub project can use it."
+  categories:
+    - community-tools
+
+- name: insight.pycal.org
+  url: https://insight.pycal.org/
+  badge: stable
+  badge_label: Live
+  description: "Community insights for GitHub projects: response times to issues and pull requests, contributors, and badges to show them."
+  categories:
+    - community-tools
+
+- name: ai-prompt-auto-commit
+  url: https://github.com/pycalendar/ai-prompt-auto-commit
+  badge: poc
+  badge_label: Beta
+  description: "pre-commit hook that records the prompts you send to Claude Code or Codex and appends them to your commit messages, so the history shows the AI assistance behind each change."
+  categories:
+    - community-tools

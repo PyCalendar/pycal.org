@@ -21,4 +21,9 @@
 - id: lib
   title: Libraries
   description: "Python libraries for your applications."
+  alt: true
+
+- id: community-tools
+  title: Community Tools
+  description: "Tools and libraries created by the community."
   alt: false
